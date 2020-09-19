@@ -7,8 +7,6 @@ import { OverlayContainer } from '@angular/cdk/overlay';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-material-example';
-
   isDarkTheme = false;
 
   constructor(private _overlay: OverlayContainer, private _elementRef: ElementRef) {
