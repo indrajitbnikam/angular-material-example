@@ -1,5 +1,7 @@
 # AngularMaterialExample
 
+![Build and Deploy](https://github.com/indrajitbnikam/angular-material-example/workflows/Build%20and%20Deploy/badge.svg?branch=master)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
 
 ## Development server
