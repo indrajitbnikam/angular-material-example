@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
+import { OverlayContainer } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-material-example';
+
+  isDarkTheme = false;
+
+  constructor(private _overlay: OverlayContainer, private _elementRef: ElementRef) {
+
+  }
+
+  toggleTheme() {
+    this.isDarkTheme = !this.isDarkTheme;
+    if (this.isDarkTheme) {
+      this._elementRef.nativeElement.classList.add('dark-theme');
+      this._overlay.getContainerElement().classList.add('dark-theme');
+    } else {
+      this._elementRef.nativeElement.classList.remove('dark-theme');
+      this._overlay.getContainerElement().classList.remove('dark-theme');
+    }
+  }
 }
